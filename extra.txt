@@ -1,0 +1,8 @@
+#Custom GROK patterns for customer
+#Created by Daniel Love
+#GROK Format %{SYNTAX:SEMANTIC}
+#EXAMPLE: MESSAGE_ID [0-9A-F]{12,13}
+LOG \s\w+\s\d+
+ALERT (?<=alertname=")\w+\s\w+
+VIC (?<=computername=")\w+
+SEV (?<=severity=")\d+
